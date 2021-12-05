@@ -29,7 +29,7 @@ const Header = () => {
 								{cart.length}
 							</Badge>
 						</Dropdown.Toggle>
-						<Dropdown.Menu style={{ minWidth: 370 }}>
+						<Dropdown.Menu style={{ minWidth: 300 }}>
 							{cart.map((item) => (
 								<div style={{ padding: 10 }}>
 									{item.name} - {item.price}
