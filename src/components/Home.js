@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Route } from "react-router";
-import Restaurant from "./Restaurant";
 
 const Home = () => {
 	const [restro, setRestro] = useState(null);
