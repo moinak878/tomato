@@ -1,11 +1,18 @@
 import "./styles.css";
 import { React, useContext } from "react";
-import { Container, Navbar, Nav, Dropdown, Badge } from "react-bootstrap";
+import {
+	Container,
+	Navbar,
+	Nav,
+	Dropdown,
+	Badge,
+	FormControl,
+} from "react-bootstrap";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { CartContext } from "../Context";
 const Header = () => {
-	const { cart, totalQty } = useContext(CartContext);
+	const { cart, totalQty, setSearchQuery } = useContext(CartContext);
 	return (
 		<Navbar bg="dark" variant="dark">
 			<Container>
@@ -20,6 +27,13 @@ const Header = () => {
 							Cart
 						</Link>
 					</Nav.Link>
+				</Nav>
+				<Nav className="ml-auto">
+					<FormControl
+						style={{ width: "300" }}
+						placeholder="Search an item"
+						onChange={(e) => setSearchQuery(e.target.value)}
+					/>
 				</Nav>
 				<Nav>
 					<Dropdown alignRight style={{ marginRight: 150 }}>

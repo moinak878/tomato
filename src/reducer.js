@@ -118,5 +118,8 @@ export const reducer = (state, action) => {
 			};
 		}
 	}
+	if (action.type === "SET_SEARCH_QUERY") {
+		return { ...state, searchQuery: action.payload };
+	}
 	return state;
 };

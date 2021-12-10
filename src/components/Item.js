@@ -3,8 +3,10 @@ import { Card, Button } from "react-bootstrap";
 import { CartContext } from "../Context";
 
 const Item = ({ menu }) => {
-	const { cart, addToCart, removeFromCart, decrement } = useContext(CartContext);
-	console.log(cart);
+	const { cart, addToCart, removeFromCart, decrement } =
+		useContext(CartContext);
+	
+
 	return (
 		<div>
 			<Card className="d-flex m-3">
@@ -19,7 +21,10 @@ const Item = ({ menu }) => {
 						-
 					</Button>
 					{cart.some((e) => e.name === menu.name && e.id === menu.id) && (
-						<Button variant="primary bg-warning m-3" onClick={() => removeFromCart(menu)}>
+						<Button
+							variant="primary bg-warning m-3"
+							onClick={() => removeFromCart(menu)}
+						>
 							Remove from cart
 						</Button>
 					)}
