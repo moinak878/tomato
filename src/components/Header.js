@@ -5,7 +5,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { CartContext } from "../Context";
 const Header = () => {
-	const { cart } = useContext(CartContext);
+	const { cart, totalQty } = useContext(CartContext);
 	return (
 		<Navbar bg="dark" variant="dark">
 			<Container>
@@ -22,17 +22,15 @@ const Header = () => {
 					</Nav.Link>
 				</Nav>
 				<Nav>
-					<Dropdown alignRight>
+					<Dropdown alignRight style={{ marginRight: 150 }}>
 						<Dropdown.Toggle variant="success">
 							<FaShoppingCart color="white" />
-							<Badge style={{ margin: 5 }} bg="info">
-								{cart.length}
-							</Badge>
+							<Badge bg="info">{totalQty}</Badge>
 						</Dropdown.Toggle>
 						<Dropdown.Menu style={{ minWidth: 300 }}>
 							{cart.map((item) => (
 								<div style={{ padding: 10 }}>
-									{item.name} - {item.price}
+									{item.name} - Rs {item.price} x {item.qty}
 								</div>
 							))}
 							{cart.length === 0 ? (
