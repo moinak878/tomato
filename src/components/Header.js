@@ -1,5 +1,7 @@
 import "./styles.css";
 import { React, useContext } from "react";
+import { getAuth, signOut } from "firebase/auth";
+import { useAuthState } from "../firebase";
 import {
 	Container,
 	Navbar,
@@ -7,12 +9,14 @@ import {
 	Dropdown,
 	Badge,
 	FormControl,
+	Button,
 } from "react-bootstrap";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { CartContext } from "../Context";
 const Header = () => {
 	const { cart, totalQty, setSearchQuery } = useContext(CartContext);
+	const { user } = useAuthState();
 	return (
 		<Navbar bg="dark" variant="dark">
 			<Container>
@@ -52,6 +56,17 @@ const Header = () => {
 							) : null}
 						</Dropdown.Menu>
 					</Dropdown>
+				</Nav>
+				<Nav>
+					{user ? (
+						<Button variant="outline-danger" onClick={() => signOut(getAuth())}>
+							Sign out
+						</Button>
+					) : (
+						<Link to="/login">
+							<Button variant="outline-success">Sign in</Button>
+						</Link>
+					)}
 				</Nav>
 			</Container>
 		</Navbar>
