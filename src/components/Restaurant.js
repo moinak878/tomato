@@ -4,6 +4,21 @@ import { useState, useEffect } from "react";
 import { CartContext } from "../Context";
 import Pagination from "./Pagination";
 import Item from "./Item";
+import Oops from "./Oops";
+
+const headerImg = {
+	position: "relative",
+	width: "100%",
+	height: "230px",
+	background:
+		"url(https://image.shutterstock.com/image-photo/various-asian-meals-on-rustic-260nw-1125066479.jpg)",
+	backgroundSize: "cover",
+	backgroundPosition: "center",
+	backgroundRepeat: "no-repeat",
+	textAllign: "center",
+	alignItems: "center",
+	fontWeight: "bold",
+};
 
 const Restaurant = () => {
 	const { id } = useParams();
@@ -12,7 +27,7 @@ const Restaurant = () => {
 	const { searchQuery } = useContext(CartContext);
 
 	const [currentPage, setCurrentPage] = useState(1);
-	const [menusPerPage] = useState(4);
+	const [menusPerPage] = useState(2);
 	useEffect(() => {
 		getMenu(id);
 		async function getMenu() {
@@ -40,42 +55,51 @@ const Restaurant = () => {
 			);
 		});
 	}
-	return searchQuery ? (
-		<div>
-			{menu && (
-				<div className="menus">
-					<h1 className="col-6 offset-5">{restaurant}</h1>
-					{transformProducts.map((menu, index) => (
-						<div key={index}>
-							<Item menu={menu} />
+	return (
+		<>
+			<div className=" text-center" style={headerImg}>
+				<h1 className="text-light m-auto align-self-center p-5 align-middle display-1 font-weight-bold">
+					{restaurant}
+				</h1>
+			</div>
+
+			{menu && searchQuery && transformProducts.length > 0 && (
+				<div>
+					{menu && (
+						<div className="menus">
+							{transformProducts.map((menu, index) => (
+								<div key={index}>
+									<Item menu={menu} />
+								</div>
+							))}
 						</div>
-					))}
-					<Pagination
-						menusPerPage={menusPerPage}
-						totalMenus={menu.length}
-						paginate={paginate}
-					/>
+					)}
 				</div>
 			)}
-		</div>
-	) : (
-		<div>
-			{currentmenus && (
-				<div className="menus">
-					<h1 className="col-6 offset-5">{restaurant}</h1>
-					{currentmenus.map((menu, index) => (
-						<div key={index}>
-							<Item menu={menu} />
-						</div>
-					))}
-					<Pagination
-						menusPerPage={menusPerPage}
-						totalMenus={menu.length}
-						paginate={paginate}
-					/>
+			{menu && searchQuery && transformProducts.length === 0 && (
+				<div className="restros">
+					<Oops />
 				</div>
 			)}
-		</div>
+			{menu && !searchQuery && (
+				<div>
+					{currentmenus && (
+						<div className="menus">
+							{currentmenus.map((menu, index) => (
+								<div key={index}>
+									<Item menu={menu} />
+								</div>
+							))}
+							<Pagination
+								menusPerPage={menusPerPage}
+								totalMenus={menu.length}
+								paginate={paginate}
+							/>
+						</div>
+					)}
+				</div>
+			)}
+		</>
 	);
 };
 

@@ -6,7 +6,7 @@ const Pagination = ({ menusPerPage, totalMenus, paginate }) => {
 		pageNumbers.push(i);
 	}
 	return (
-		<nav>
+		<nav className="d-flex justify-content-center bottom-0">
 			<ul className="pagination">
 				{pageNumbers.map((number) => (
 					<li key={number} className="page-item">
