@@ -11,6 +11,7 @@ import Login from "./components/Login.js";
 import Signup from "./components/Signup.js";
 import Restaurant from "./components/Restaurant.js";
 import { AuthContextProvider, useAuthState } from "./firebase";
+import Oops from "./components/Oops.js";
 
 const AuthenticatedRoute = ({ children }) => {
 	const { isAuthenticated } = useAuthState();
@@ -64,7 +65,8 @@ function App() {
 							</AuthenticatedRoute>
 						}
 					/>
-					<Route path="/:id" element={<Restaurant />} />
+					<Route path="/:id" exact element={<Restaurant />} />
+					<Route path="/oops" exact element={<Oops />} />
 				</Routes>
 			</Router>
 		</AuthContextProvider>
