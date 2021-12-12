@@ -3,7 +3,7 @@ import { CartContext } from "../Context";
 import { Link } from "react-router-dom";
 import { FormControl, Card, Button } from "react-bootstrap";
 import Oops from "./Oops";
-
+const tomato = require("./tomato.png").default;
 const Home = () => {
 	const { searchQuery, setSearchQuery } = useContext(CartContext);
 	const headerImg = {
@@ -40,7 +40,7 @@ const Home = () => {
 			<div className=" text-center" style={headerImg}>
 				<img
 					className="text-light mt-5 col-md-4 align-self-center"
-					src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png"
+					src={tomato}
 					alt="tomato"
 				/>
 				<p className="text-light m-auto font-weight-bold align-self-center">

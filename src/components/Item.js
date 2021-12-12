@@ -8,7 +8,7 @@ const Item = ({ menu }) => {
 	const [thisItem] = useState(menu);
 	return (
 		<div>
-			<Card className=" d-flex m-5 my-4">
+			<Card className=" d-flex m-auto my-4" style={{ width: "75rem" }}>
 				<Card.Body className="d-flex ">
 					<img
 						className=" rounded"
@@ -16,14 +16,29 @@ const Item = ({ menu }) => {
 						src="https://b.zmtcdn.com/data/dish_photos/cdb/d77c370349c174e0ff22a35c072decdb.jpg"
 						alt="food pic"
 					/>
-					<div className="d-flex flex-column">
-						<Card.Title className="font-weight-bold m-3">
+					<div
+						className="d-flex flex-column"
+						style={{ width: "300px", height: "150px" }}
+					>
+						<Card.Title
+							className="border font-weight-bold mx-5 mt-4"
+							style={{ width: "300px" }}
+						>
 							{menu.name}
+
+							{cart.map((item) => (
+								<span style={{ margin: "5px", color: "purple" }}>
+									{item.name === thisItem.name ? " x " + item.qty : null}
+								</span>
+							))}
 						</Card.Title>
-						<Card.Text className="mx-3">Rs. {menu.price}0</Card.Text>
+						<Card.Text className="mx-5">Rs. {menu.price}0</Card.Text>
 					</div>
 
-					<div className="hei">
+					<div
+						className="align-center col-md-3 offset-md-5 mt-3 "
+						style={{ width: "150px" }}
+					>
 						<div className="d-flex ">
 							<Button
 								variant="outline-success"
@@ -34,7 +49,7 @@ const Item = ({ menu }) => {
 							</Button>
 
 							<Button
-								variant="outline-danger h-2"
+								variant="outline-danger "
 								style={{ margin: "5px" }}
 								onClick={() => decrement(menu)}
 							>
@@ -44,11 +59,11 @@ const Item = ({ menu }) => {
 						<div className=" d-flex">
 							{cart.some((e) => e.name === menu.name && e.id === menu.id) && (
 								<Button
-									style={{ height: "40px", width: "60px", margin: 1 }}
-									variant="outline-secondary  m-3"
+									style={{ height: "40px", width: "60px", marginLeft: "35px" }}
+									variant="outline-secondary mt-4"
 									onClick={() => removeFromCart(menu)}
 								>
-									<FaTrash />
+									<FaTrash className="m-1" />
 								</Button>
 							)}
 						</div>
@@ -60,9 +75,3 @@ const Item = ({ menu }) => {
 };
 
 export default Item;
-
-// {cart.map((menu) => (
-// 								<span style={{ margin: 10 }}>
-// 									{menu.name === thisItem.name ? menu.qty : null}
-// 								</span>
-// 							))}
