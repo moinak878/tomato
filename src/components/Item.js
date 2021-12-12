@@ -21,7 +21,7 @@ const Item = ({ menu }) => {
 						style={{ width: "300px", height: "150px" }}
 					>
 						<Card.Title
-							className="border font-weight-bold mx-5 mt-4"
+							className=" font-weight-bold mx-5 mt-4"
 							style={{ width: "300px" }}
 						>
 							{menu.name}
