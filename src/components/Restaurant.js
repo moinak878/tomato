@@ -31,7 +31,7 @@ const Restaurant = () => {
 	useEffect(() => {
 		getMenu(id);
 		async function getMenu() {
-			const response = await fetch("http://localhost:8000/api/" + id);
+			const response = await fetch("https://my-json-server.typicode.com/moinak878/tomato/api/" + id);
 			const data = await response.json();
 			setMenu(data.menu);
 			setRestaurant(data.name);

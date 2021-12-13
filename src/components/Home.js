@@ -20,7 +20,7 @@ const Home = () => {
 	useEffect(() => {
 		getData();
 		async function getData() {
-			const response = await fetch("http://localhost:8000/api");
+			const response = await fetch("https://my-json-server.typicode.com/moinak878/tomato/api/");
 			const data = await response.json();
 			setRestro(data);
 		}
