@@ -1,11 +1,11 @@
-import { React, useContext, useState } from "react";
+import { React, useContext } from "react";
 import { Card, Button } from "react-bootstrap";
 import { CartContext } from "../Context";
 import { FaPlus, FaMinus, FaTrash } from "react-icons/fa";
 const Item = ({ menu }) => {
 	const { cart, addToCart, removeFromCart, decrement } =
 		useContext(CartContext);
-	const [thisItem] = useState(menu);
+
 	return (
 		<div>
 			<Card className=" d-flex m-auto my-4" style={{ width: "75rem" }}>
@@ -28,11 +28,11 @@ const Item = ({ menu }) => {
 
 							{cart.map((item) => (
 								<span style={{ margin: "5px", color: "purple" }}>
-									{item.name === thisItem.name ? " x " + item.qty : null}
+									{item.name === menu.name ? " x " + item.qty : null}
 								</span>
 							))}
 						</Card.Title>
-						<Card.Text className="mx-5">Rs. {menu.price}0</Card.Text>
+						<Card.Text className="mx-5">Rs. {menu.price}</Card.Text>
 					</div>
 
 					<div

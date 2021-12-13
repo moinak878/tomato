@@ -7,7 +7,7 @@
 				{
 					"id": 1,
 					"name": "Biryani",
-					"price": 12.00,
+					"price": 120.00,
 					"description": "Pizza description",
 					"image": "https://www.pizzahut.com.au/media/pizzahut/images/menu/pizza-1.jpg",
 					"qty": 1
@@ -15,7 +15,7 @@
 				{
 					"id": 2,
 					"name": "Fried Rice",
-					"price": 11.00,
+					"price": 110.00,
 					"description": "Pizza description",
 					"image": "https://www.pizzahut.com.au/media/pizzahut/images/menu/pizza-1.jpg",
 					"qty": 1
@@ -23,7 +23,7 @@
 				{
 					"id": 3,
 					"name": "Chicken Pizza",
-					"price": 10.00,
+					"price": 100.00,
 					"description": "Pizza description",
 					"image": "https://www.pizzahut.com.au/media/pizzahut/images/menu/pizza-1.jpg",
 					"qty": 1
@@ -31,7 +31,7 @@
 				{
 					"id": 4,
 					"name": "Veg Pizza",
-					"price": 13.00,
+					"price": 130.00,
 					"description": "Pizza description",
 					"image": "https://www.pizzahut.com.au/media/pizzahut/images/menu/pizza-1.jpg",
 					"qty": 1
@@ -39,7 +39,7 @@
 				{
 					"id": 5,
 					"name": "Butter Naan",
-					"price": 20.00,
+					"price": 200.00,
 					"description": "Pizza description",
 					"image": "https://www.pizzahut.com.au/media/pizzahut/images/menu/pizza-1.jpg",
 					"qty": 1
@@ -47,7 +47,7 @@
 				{
 					"id": 6,
 					"name": "Butter Chicken Pizza",
-					"price": 80.00,
+					"price": 800.00,
 					"description": "Pizza description",
 					"image": "https://www.pizzahut.com.au/media/pizzahut/images/menu/pizza-1.jpg",
 					"qty": 1
@@ -55,7 +55,7 @@
 				{
 					"id": 7,
 					"name": "OG Pizza",
-					"price": 10.00,
+					"price": 100.00,
 					"qty": 1
 				}
 			]
@@ -67,7 +67,7 @@
 				{
 					"id": 8,
 					"name": "Abc",
-					"price": 10.00,
+					"price": 100.00,
 					"description": "Pizza description",
 					"image": "https://www.pizzahut.com.au/media/pizzahut/images/menu/pizza-1.jpg",
 					"qty": 1
@@ -75,7 +75,7 @@
 				{
 					"id": 9,
 					"name": "Def",
-					"price": 10.00,
+					"price": 100.00,
 					"description": "Pizza description",
 					"image": "https://www.pizzahut.com.au/media/pizzahut/images/menu/pizza-1.jpg",
 					"qty": 1
@@ -83,7 +83,7 @@
 				{
 					"id": 10,
 					"name": "Chicken Sizzler",
-					"price": 10.00,
+					"price": 100.00,
 					"description": "Pizza description",
 					"image": "https://www.pizzahut.com.au/media/pizzahut/images/menu/pizza-1.jpg",
 					"qty": 1
@@ -91,7 +91,7 @@
 				{
 					"id": 11,
 					"name": "Bruhhh",
-					"price": 10.00,
+					"price": 100.00,
 					"description": "Pizza description",
 					"image": "https://www.pizzahut.com.au/media/pizzahut/images/menu/pizza-1.jpg",
 					"qty": 1
@@ -99,7 +99,7 @@
 				{
 					"id": 12,
 					"name": "Pizza",
-					"price": 10.00,
+					"price": 100.00,
 					"description": "Pizza description",
 					"image": "https://www.pizzahut.com.au/media/pizzahut/images/menu/pizza-1.jpg",
 					"qty": 1
@@ -107,7 +107,7 @@
 				{
 					"id": 13,
 					"name": "Pizza",
-					"price": 10.00,
+					"price": 100.00,
 					"description": "Pizza description",
 					"image": "https://www.pizzahut.com.au/media/pizzahut/images/menu/pizza-1.jpg",
 					"qty": 1
@@ -115,7 +115,7 @@
 				{
 					"id": 14,
 					"name": "Pizza",
-					"price": 10.00,
+					"price": 100.00,
 					"qty": 1
 				}
 			]
@@ -127,7 +127,7 @@
 				{
 					"id": 15,
 					"name": "Delta Suites ka fancy menu",
-					"price": 10.00,
+					"price": 100.00,
 					"description": "Pizza description",
 					"image": "https://www.pizzahut.com.au/media/pizzahut/images/menu/pizza-1.jpg",
 					"qty": 1
@@ -135,7 +135,7 @@
 				{
 					"id": 16,
 					"name": "Mehanga",
-					"price": 10.00,
+					"price": 100.00,
 					"description": "Pizza description",
 					"image": "https://www.pizzahut.com.au/media/pizzahut/images/menu/pizza-1.jpg",
 					"qty": 1
@@ -143,7 +143,7 @@
 				{
 					"id": 17,
 					"name": "Kaafi Mehanga Pizza",
-					"price": 10.00,
+					"price": 100.00,
 					"description": "Pizza description",
 					"image": "https://www.pizzahut.com.au/media/pizzahut/images/menu/pizza-1.jpg",
 					"qty": 1
@@ -151,7 +151,7 @@
 				{
 					"id": 18,
 					"name": "Aukaat ke bahar wali Pizza",
-					"price": 10.00,
+					"price": 100.00,
 					"description": "Pizza description",
 					"image": "https://www.pizzahut.com.au/media/pizzahut/images/menu/pizza-1.jpg",
 					"qty": 1
@@ -159,7 +159,7 @@
 				{
 					"id": 19,
 					"name": "Pizza",
-					"price": 10.00,
+					"price": 100.00,
 					"description": "Pizza description",
 					"image": "https://www.pizzahut.com.au/media/pizzahut/images/menu/pizza-1.jpg",
 					"qty": 1
@@ -167,7 +167,7 @@
 				{
 					"id": 20,
 					"name": "Pizza",
-					"price": 10.00,
+					"price": 100.00,
 					"description": "Pizza description",
 					"image": "https://www.pizzahut.com.au/media/pizzahut/images/menu/pizza-1.jpg",
 					"qty": 1
@@ -175,7 +175,7 @@
 				{
 					"id": 21,
 					"name": "Pizza",
-					"price": 10.00,
+					"price": 100.00,
 					"qty": 1
 				}
 			]

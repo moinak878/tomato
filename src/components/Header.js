@@ -57,15 +57,18 @@ const Header = () => {
 						/>
 					</Nav>
 					<Nav>
-						<Dropdown alignRight style={{ marginRight: 10}}>
+						<Dropdown alignRight style={{ marginRight: 10 }}>
 							<Dropdown.Toggle variant="outline-success">
 								<FaShoppingCart color="white" />
-								<Badge style={{ margin: 1}} bg="info">{totalQty}</Badge>
+								<Badge style={{ margin: 1 }} bg="info">
+									{totalQty}
+								</Badge>
 							</Dropdown.Toggle>
 							<Dropdown.Menu style={{ minWidth: 210 }}>
 								{cart.map((item) => (
 									<div style={{ padding: 10 }}>
-										{item.name} - Rs {item.price} x {item.qty}
+										<strong>{item.name}</strong> - Rs {item.price} x{" "}
+										<span style={{ color: "red" }}>{item.qty}</span>
 									</div>
 								))}
 								{cart.length === 0 ? (
