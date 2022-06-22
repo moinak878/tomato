@@ -40,7 +40,7 @@ const Header = () => {
 								to="/"
 								onClick={() => setSearchQuery(null)}
 							>
-								Tomato
+								Zomato
 							</Link>
 						</Navbar.Brand>
 						<Nav.Link>
